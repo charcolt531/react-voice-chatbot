@@ -1,13 +1,12 @@
 import CallBob from './CallBob';
-import LanguageDropdown from './LanguageDropdown';
 import { Layout } from 'antd';
 import LanguageManager from './LanguageManager';
 import { Fragment } from 'react';
 import { CallHistory } from './CallHistory';
-import { GithubLink } from './GithubLink';
-import ConversionIdeasModal from './ConversationIdeasModal';
 import CallManager from './CallManager';
+
 const { Header, Content } = Layout;
+
 export default function MainLayout() {
   return (
     <Fragment>
@@ -15,11 +14,9 @@ export default function MainLayout() {
         <LanguageManager>
           <CallManager>
             <Header className="flex bg-[#45badd] items-center h-12 flex-row px-0 justify-between">
-              <GithubLink />
+              <div></div>
               <div className="flex items-center">
-                <ConversionIdeasModal />
                 <CallHistory />
-                <LanguageDropdown />
               </div>
             </Header>
             <Content>

@@ -29,7 +29,7 @@ export default function TalkButton({
         className="cursor-pointer outline-none  md:text-base text-white bg-[#ff3482] rounded-full border-none border-r-5 shadow md:mb-10"
         onClick={userCall}
       >
-        <div className="w-[120px] h-[50px] flex justify-center items-center">{t('call.call')}</div>
+        <div className="w-[120px] h-[50px] flex justify-center items-center">Call Cappy</div>
       </button>
     );
   }

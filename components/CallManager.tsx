@@ -50,7 +50,7 @@ const CallManager: React.FC<CallManagerProps> = ({ children }) => {
   const [userSpeechSynthesis, setUserSpeechSynthesis] = useState<SpeechSynthesis>();
   const [userLocalStorage, setUserLocalStorage] = useState<Storage>();
   const { selectedLanguage } = useLanguage();
-  const defaultIntroduction = t('bob.introduction');
+  const defaultIntroduction = "Hi, I'm Coach Cappy and I'm here to make your networking dreams come true.";
   const defaultMessage = [
     {
       message: defaultIntroduction,
@@ -82,6 +82,14 @@ const CallManager: React.FC<CallManagerProps> = ({ children }) => {
     }
     const utterance = new SpeechSynthesisUtterance(message);
     utterance.lang = selectedLanguage;
+    
+    // Get available voices and set specific voice
+    const voices = userSpeechSynthesis.getVoices();
+    const selectedVoice = voices.find(voice => voice.name === 'Google UK English Male');
+    if (selectedVoice) {
+      utterance.voice = selectedVoice;
+    }
+
     utterance.onstart = handleChatbotSpeechStart;
     utterance.onend = handleChatbotSpeechEnd;
     userSpeechSynthesis.speak(utterance);

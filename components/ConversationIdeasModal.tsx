@@ -10,21 +10,28 @@ import styled from 'styled-components';
 const StyledDrawer = styled(Drawer)`
   .ant-drawer-body {
     padding: 0;
-    background-color: rgb(17 24 39);
+    background-color: rgba(17, 24, 39, 0.7);
   }
   .ant-drawer-header {
-    background-color: rgb(17 24 39);
+    background-color: rgba(17, 24, 39, 0.7);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
   .ant-drawer-title {
     display: flex;
     justify-content: center;
+    color: rgba(255, 255, 255, 0.9);
   }
   .ant-drawer-close {
-    color: white;
+    color: rgba(255, 255, 255, 0.7);
   }
   .ant-list-item {
     display: flex;
     justify-content: center;
+    background-color: rgba(107, 114, 128, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .ant-btn-link {
+    color: rgba(255, 255, 255, 0.9);
   }
 `;
 
