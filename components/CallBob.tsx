@@ -34,7 +34,6 @@ export default function CallBob() {
             endCall={endCall}
             isChatbotSpeaking={isChatbotSpeaking}
           />
-          <ConversionIdea onSelect={handleSend} />
         </div>
       </div>
     </div>
